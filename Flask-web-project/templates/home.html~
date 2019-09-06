@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Book Review
+{% endblock %}
+
+{% block contents %}
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+   <div class="container">
+  <a class="navbar-brand" href="#">Book Review</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse mr-5" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto ">
+      <li class="nav-item active ">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+     
+      
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 ">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0 mr-5" type="submit">Search</button>
+    </form>
+     <div class="nav-item mr-5">
+        <a class="nav-link btn btn-primary" href="{{ url_for('logout') }}">logout</a>
+     </div>
+  </div>
+  </div>
+</nav>
+<!-- main -->
+<main id="main" class="site-main main mt-5">
+    <div class="container mr-auto">
+	   <h5 class="theme-cards__title">List of books</h5>
+       <p class="text-gray-soft">Select the book you want to review</p>
+    </div>
+    <div class="container">
+        <div class="theme-cards-holder">
+            <div class="row">
+{% for book in books %}
+<div class="col-md-4 col-sm-6 mt-3 " >           
+			<div class="theme-card list-group-item mr-1" style="background-color:#f1f1f1;">
+				<a href="{{ url_for('book', book_id=book.isbn) }}">
+					<h4 class="list-group-item-heading">{{ book.title}}</h4>
+					<p class="list-group-item-text">{{ book.author}}</p>
+					<p class="list-group-item-text">{{ book.year}}</p>
+				</a>
+			</div>
+</div>
+ {% endfor %}                  
+        </div>
+    </div>
+</row>
+ <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center mt-3">
+   <li class="page-item"><a class="page-link" href="{{url_for('homeid', post_id=0)}}">Start</a></li>
+  {% if count_id != 0 %}
+       <li class="page-item"><a class="page-link" href="{{url_for('homeid', post_id=count_id-1)}}">{{count_id-1}}<span class="sr-only">(current)</span></a></li>
+  {% endif %} 
+     <li class="page-item active"><a class="page-link" href="{{url_for('homeid', post_id=count_id)}}">{{count_id}}<span class="sr-only">(current)</span></a></li>  
+    <li class="page-item"><a class="page-link" href="{{url_for('homeid', post_id=count_id+1)}}">{{count_id+1}}<span class="sr-only">(current)</span></a></li>
+    <li class="page-item"><a class="page-link" href="{{url_for('homeid', post_id=83)}}">End</a></li>
+  </ul>
+</nav>
+
+ </main>
+{% endblock %}
