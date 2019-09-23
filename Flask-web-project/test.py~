@@ -10,7 +10,7 @@ import urllib.request as urllib2
 from flask_bootstrap import Bootstrap
 from flask_testing import LiveServerTestCase
 from selenium import webdriver
-
+from flask import Flask, url_for
 
 
 
@@ -33,16 +33,16 @@ class TestBase(LiveServerTestCase):
 
     def tearDown(self):
         self.driver.quit()
-    '''
+'''
     def test_server_is_up_and_running(self):
         response = urllib2.urlopen(self.get_server_url())
         self.assertEqual(response.code, 200)
-    '''
+    
     
    
-        
+      
 class TestLogin(TestBase):
-    '''
+    
     def test_login(self):
     	test_employee1_email="ayushbansal323@gmail.com"
     	test_employee1_password="a1as2sd3d"
@@ -76,8 +76,11 @@ class TestLogin(TestBase):
     	src = self.driver.page_source
     	text_found = re.search(r'The username or password does not match', src)
     	self.assertNotEqual(text_found, None)
-    '''
-
+    
+    def test_page_excess(self):
+    	response = urllib2.urlopen("http://127.0.0.1:8943/book/039925675X")
+    	assert url_for('home') not in self.driver.current_url
+'''
 class CreateObjects(object):
 
     def login_user(self):
@@ -86,10 +89,10 @@ class CreateObjects(object):
     	self.driver.find_element_by_id("inputEmail").send_keys(test_employee1_email)
     	self.driver.find_element_by_id("inputPassword").send_keys(test_employee1_password)
     	self.driver.find_element_by_xpath("//*[@type = 'submit']").click()
-    	time.sleep(10)
+    	time.sleep(12)
 
 class TestHome(CreateObjects, TestBase):
-	'''
+	'''	
 	def test_search_by_year(self):
 		self.login_user()
 		test_year="1998"
@@ -106,39 +109,37 @@ class TestHome(CreateObjects, TestBase):
 		select.select_by_visible_text('title')
 		self.driver.find_element_by_id("inputSearch").send_keys(test_title)
 		self.driver.find_element_by_id("submitSearch").click()
-		time.sleep(8)
+		time.sleep(10)
 		src = self.driver.page_source
 		text_found = re.search(r'Steve Jobs', src)
 		self.assertNotEqual(text_found, None)
-	
+	'''	
 	def test_search_by_author(self):
 		self.login_user()
 		test_author="Walter Isaacson"
 		select = Select(self.driver.find_element_by_id('submitSelector'))
-		select.select_by_visible_text('title')
+		select.select_by_visible_text('author')
 		self.driver.find_element_by_id("inputSearch").send_keys(test_author)
 		self.driver.find_element_by_id("submitSearch").click()
-		time.sleep(8)
+		time.sleep(10)
 		src = self.driver.page_source
 		text_found = re.search(r'Walter Isaacson', src)
 		self.assertNotEqual(text_found, None)
-
+	'''	
 	def test_search_by_isbn(self):
 		self.login_user()
 		test_isbn="1451648537"
-		select = Select(self.driver.find_element_by_id('submitSelector'))
-		select.select_by_visible_text('isbn')
 		self.driver.find_element_by_id("inputSearch").send_keys(test_isbn)
 		self.driver.find_element_by_id("submitSearch").click()
-		time.sleep(8)
+		time.sleep(10)
 		src = self.driver.page_source
 		text_found = re.search(r'Walter Isaacson', src)
 		self.assertNotEqual(text_found, None)
-	'''
+	
 	def test_click_book(self):
 		self.login_user()
-		self.driver.find_element_by_xpath("//a[@href = '/book/039925675X']").click()
-		time.sleep(8)
-		assert url_for('book/039925675X') in self.driver.current_url
+		response = urllib2.urlopen("http://127.0.0.1:8943/book/039925675X")
+		self.assertEqual(response.code, 200)
+	'''
 if __name__ == '__main__':
     unittest.main()
