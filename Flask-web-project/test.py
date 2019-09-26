@@ -35,15 +35,17 @@ class TestBase(LiveServerTestCase):
         self.driver.quit()
 
     def test_server_is_up_and_running(self):
+        """Tests whether server is running"""
         response = urllib2.urlopen(self.get_server_url())
         self.assertEqual(response.code, 200)
     
     
    
-      
+   
 class TestLogin(TestBase):
     
     def test_login(self):
+    	"""Tests whether user can login"""
     	test_employee1_email="ayushbansal323@gmail.com"
     	test_employee1_password="a1as2sd3d"
     	self.driver.find_element_by_id("inputEmail").send_keys(test_employee1_email)
@@ -54,6 +56,7 @@ class TestLogin(TestBase):
     	assert url_for('home') in self.driver.current_url
     
     def test_login_fail1(self):
+    	"""Tests whether user cannot login with wrong emaiid and password"""
     	test_employee1_email="ayush@gmail.com"
     	test_employee1_password="a1as2s"
     	self.driver.find_element_by_id("inputEmail").send_keys(test_employee1_email)
@@ -66,6 +69,7 @@ class TestLogin(TestBase):
     	self.assertNotEqual(text_found, None)
     	
     def test_login_fail2(self):
+    	"""Tests whether user cannot login with wrong password"""
     	test_employee1_email="ayushbansal323@gmail.com"
     	test_employee1_password="a1as2s"
     	self.driver.find_element_by_id("inputEmail").send_keys(test_employee1_email)
@@ -78,6 +82,7 @@ class TestLogin(TestBase):
     	self.assertNotEqual(text_found, None)
     
     def test_page_excess(self):
+    	"""Tests whether user cannot excess the page without login"""
     	response = urllib2.urlopen("http://127.0.0.1:8943/book/039925675X")
     	assert url_for('home') not in self.driver.current_url
 
@@ -94,6 +99,7 @@ class CreateObjects(object):
 class TestHome(CreateObjects, TestBase):
 		
 	def test_search_by_year(self):
+		"""Tests whether user can search book by year"""
 		self.login_user()
 		test_year="1998"
 		select = Select(self.driver.find_element_by_id('submitSelector'))
@@ -103,6 +109,7 @@ class TestHome(CreateObjects, TestBase):
 		time.sleep(8)
 		
 	def test_search_by_title(self):
+		"""Tests whether user can search book by title"""
 		self.login_user()
 		test_title="Steve Jobs"
 		select = Select(self.driver.find_element_by_id('submitSelector'))
@@ -115,6 +122,7 @@ class TestHome(CreateObjects, TestBase):
 		self.assertNotEqual(text_found, None)
 		
 	def test_search_by_author(self):
+		"""Tests whether user can search book by author"""
 		self.login_user()
 		test_author="Walter Isaacson"
 		select = Select(self.driver.find_element_by_id('submitSelector'))
@@ -127,6 +135,7 @@ class TestHome(CreateObjects, TestBase):
 		self.assertNotEqual(text_found, None)
 		
 	def test_search_by_isbn(self):
+		"""Tests whether user can search book by isbn"""
 		self.login_user()
 		test_isbn="1451648537"
 		self.driver.find_element_by_id("inputSearch").send_keys(test_isbn)
@@ -137,6 +146,7 @@ class TestHome(CreateObjects, TestBase):
 		self.assertNotEqual(text_found, None)
 	
 	def test_click_book(self):
+		"""Tests whether user can click book """
 		self.login_user()
 		response = urllib2.urlopen("http://127.0.0.1:8943/book/039925675X")
 		self.assertEqual(response.code, 200)

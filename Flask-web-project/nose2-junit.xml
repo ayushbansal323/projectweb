@@ -1,0 +1,38 @@
+<testsuite errors="0" failures="0" name="nose2-junit" skipped="0" tests="12" time="366.001">
+  <testcase classname="test.TestBase" name="test_server_is_up_and_running" time="14.272903">
+    <system-out />
+  </testcase>
+  <testcase classname="test.TestHome" name="test_click_book" time="36.781284">
+    <system-out />
+  </testcase>
+  <testcase classname="test.TestHome" name="test_search_by_author" time="47.639243">
+    <system-out />
+  </testcase>
+  <testcase classname="test.TestHome" name="test_search_by_isbn" time="55.544318">
+    <system-out />
+  </testcase>
+  <testcase classname="test.TestHome" name="test_search_by_title" time="44.447211">
+    <system-out />
+  </testcase>
+  <testcase classname="test.TestHome" name="test_search_by_year" time="45.716267">
+    <system-out />
+  </testcase>
+  <testcase classname="test.TestHome" name="test_server_is_up_and_running" time="15.044037">
+    <system-out />
+  </testcase>
+  <testcase classname="test.TestLogin" name="test_login" time="26.255450">
+    <system-out />
+  </testcase>
+  <testcase classname="test.TestLogin" name="test_login_fail1" time="27.216498">
+    <system-out />
+  </testcase>
+  <testcase classname="test.TestLogin" name="test_login_fail2" time="29.197265">
+    <system-out />
+  </testcase>
+  <testcase classname="test.TestLogin" name="test_page_excess" time="12.067385">
+    <system-out />
+  </testcase>
+  <testcase classname="test.TestLogin" name="test_server_is_up_and_running" time="10.848696">
+    <system-out />
+  </testcase>
+</testsuite>
