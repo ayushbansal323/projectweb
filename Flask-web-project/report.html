@@ -66,7 +66,9 @@
                                 
                                     <li><strong>Total</strong>: 12</li>
                                 
-                                    <li><strong>Passed</strong>: 12</li>
+                                    <li><strong>Error</strong>: 1</li>
+                                
+                                    <li><strong>Passed</strong>: 11</li>
                                 
                             </ul>
                         </div>
@@ -182,11 +184,11 @@
                                 </div>
                             </li>
                         
-                            <li data-filter-result="passed" data-search-key="test.TestHome.test_search_by_title">
-                                <div class="collapsible-header test-case--passed">
+                            <li data-filter-result="error" data-search-key="test.TestHome.test_search_by_title">
+                                <div class="collapsible-header test-case--error">
                                     <i class="material-icons">
                                         
-                                            done
+                                            error
                                         
                                     </i>
                                     test.TestHome.test_search_by_title
@@ -197,11 +199,26 @@
                                         <p>Tests whether user can search book by title</p>
                                     
 
-                                    <strong>Result: passed</strong>
+                                    <strong>Result: error</strong>
                                     <br/>
 
                                     <strong>Traceback</strong>
-                                    <code><pre>None</pre></code>
+                                    <code><pre>Traceback (most recent call last):
+  File "/usr/lib/python3.5/unittest/case.py", line 58, in testPartExecutor
+    yield
+  File "/usr/lib/python3.5/unittest/case.py", line 596, in run
+    self.setUp()
+  File "/home/ayush/study/web-project/Flask-web-project/test.py", line 31, in setUp
+    self.driver.get(self.get_server_url())
+  File "/home/ayush/.local/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/ayush/.local/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ayush/.local/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=connectionFailure&u=http%3A//localhost%3A8943/&c=UTF-8&f=regular&d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8943.
+
+</pre></code>
                                 </div>
                             </li>
                         
@@ -375,7 +392,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
         <script type="text/javascript">
             // Map test cases to their search terms
-            var AUTOCOMPLETE_TERMS_MAP = {"test.TestBase.test_server_is_up_and_running": "test.TestBase.test_server_is_up_and_running", "Tests": ["test.TestBase.test_server_is_up_and_running", "test.TestHome.test_click_book", "test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year", "test.TestHome.test_server_is_up_and_running", "test.TestLogin.test_login", "test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2", "test.TestLogin.test_page_excess", "test.TestLogin.test_server_is_up_and_running"], "whether": ["test.TestBase.test_server_is_up_and_running", "test.TestHome.test_click_book", "test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year", "test.TestHome.test_server_is_up_and_running", "test.TestLogin.test_login", "test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2", "test.TestLogin.test_page_excess", "test.TestLogin.test_server_is_up_and_running"], "server": ["test.TestBase.test_server_is_up_and_running", "test.TestHome.test_server_is_up_and_running", "test.TestLogin.test_server_is_up_and_running"], "is": ["test.TestBase.test_server_is_up_and_running", "test.TestHome.test_server_is_up_and_running", "test.TestLogin.test_server_is_up_and_running"], "running": ["test.TestBase.test_server_is_up_and_running", "test.TestHome.test_server_is_up_and_running", "test.TestLogin.test_server_is_up_and_running"], "test.TestHome.test_click_book": "test.TestHome.test_click_book", "user": ["test.TestHome.test_click_book", "test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year", "test.TestLogin.test_login", "test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2", "test.TestLogin.test_page_excess"], "can": ["test.TestHome.test_click_book", "test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year", "test.TestLogin.test_login"], "click": ["test.TestHome.test_click_book"], "book": ["test.TestHome.test_click_book", "test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year"], "test.TestHome.test_search_by_author": "test.TestHome.test_search_by_author", "search": ["test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year"], "by": ["test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year"], "author": ["test.TestHome.test_search_by_author"], "test.TestHome.test_search_by_isbn": "test.TestHome.test_search_by_isbn", "isbn": ["test.TestHome.test_search_by_isbn"], "test.TestHome.test_search_by_title": "test.TestHome.test_search_by_title", "title": ["test.TestHome.test_search_by_title"], "test.TestHome.test_search_by_year": "test.TestHome.test_search_by_year", "year": ["test.TestHome.test_search_by_year"], "test.TestHome.test_server_is_up_and_running": "test.TestHome.test_server_is_up_and_running", "test.TestLogin.test_login": "test.TestLogin.test_login", "login": ["test.TestLogin.test_login", "test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2", "test.TestLogin.test_page_excess"], "test.TestLogin.test_login_fail1": "test.TestLogin.test_login_fail1", "cannot": ["test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2", "test.TestLogin.test_page_excess"], "with": ["test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2"], "wrong": ["test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2"], "emaiid": ["test.TestLogin.test_login_fail1"], "and": ["test.TestLogin.test_login_fail1"], "password": ["test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2"], "test.TestLogin.test_login_fail2": "test.TestLogin.test_login_fail2", "test.TestLogin.test_page_excess": "test.TestLogin.test_page_excess", "excess": ["test.TestLogin.test_page_excess"], "the": ["test.TestLogin.test_page_excess"], "page": ["test.TestLogin.test_page_excess"], "without": ["test.TestLogin.test_page_excess"], "test.TestLogin.test_server_is_up_and_running": "test.TestLogin.test_server_is_up_and_running"};
+            var AUTOCOMPLETE_TERMS_MAP = {"test.TestHome.test_search_by_isbn": "test.TestHome.test_search_by_isbn", "search": ["test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year"], "password": ["test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2"], "test.TestLogin.test_login": "test.TestLogin.test_login", "wrong": ["test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2"], "test.TestHome.test_click_book": "test.TestHome.test_click_book", "test.TestLogin.test_login_fail1": "test.TestLogin.test_login_fail1", "can": ["test.TestHome.test_click_book", "test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year", "test.TestLogin.test_login"], "with": ["test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2"], "Tests": ["test.TestBase.test_server_is_up_and_running", "test.TestHome.test_click_book", "test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year", "test.TestHome.test_server_is_up_and_running", "test.TestLogin.test_login", "test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2", "test.TestLogin.test_page_excess", "test.TestLogin.test_server_is_up_and_running"], "isbn": ["test.TestHome.test_search_by_isbn"], "test.TestHome.test_search_by_title": "test.TestHome.test_search_by_title", "login": ["test.TestLogin.test_login", "test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2", "test.TestLogin.test_page_excess"], "test.TestLogin.test_page_excess": "test.TestLogin.test_page_excess", "click": ["test.TestHome.test_click_book"], "test.TestHome.test_search_by_year": "test.TestHome.test_search_by_year", "and": ["test.TestLogin.test_login_fail1"], "server": ["test.TestBase.test_server_is_up_and_running", "test.TestHome.test_server_is_up_and_running", "test.TestLogin.test_server_is_up_and_running"], "excess": ["test.TestLogin.test_page_excess"], "test.TestBase.test_server_is_up_and_running": "test.TestBase.test_server_is_up_and_running", "test.TestLogin.test_server_is_up_and_running": "test.TestLogin.test_server_is_up_and_running", "running": ["test.TestBase.test_server_is_up_and_running", "test.TestHome.test_server_is_up_and_running", "test.TestLogin.test_server_is_up_and_running"], "is": ["test.TestBase.test_server_is_up_and_running", "test.TestHome.test_server_is_up_and_running", "test.TestLogin.test_server_is_up_and_running"], "test.TestHome.test_server_is_up_and_running": "test.TestHome.test_server_is_up_and_running", "without": ["test.TestLogin.test_page_excess"], "title": ["test.TestHome.test_search_by_title"], "author": ["test.TestHome.test_search_by_author"], "page": ["test.TestLogin.test_page_excess"], "by": ["test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year"], "test.TestHome.test_search_by_author": "test.TestHome.test_search_by_author", "whether": ["test.TestBase.test_server_is_up_and_running", "test.TestHome.test_click_book", "test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year", "test.TestHome.test_server_is_up_and_running", "test.TestLogin.test_login", "test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2", "test.TestLogin.test_page_excess", "test.TestLogin.test_server_is_up_and_running"], "emaiid": ["test.TestLogin.test_login_fail1"], "year": ["test.TestHome.test_search_by_year"], "the": ["test.TestLogin.test_page_excess"], "book": ["test.TestHome.test_click_book", "test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year"], "user": ["test.TestHome.test_click_book", "test.TestHome.test_search_by_author", "test.TestHome.test_search_by_isbn", "test.TestHome.test_search_by_title", "test.TestHome.test_search_by_year", "test.TestLogin.test_login", "test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2", "test.TestLogin.test_page_excess"], "cannot": ["test.TestLogin.test_login_fail1", "test.TestLogin.test_login_fail2", "test.TestLogin.test_page_excess"], "test.TestLogin.test_login_fail2": "test.TestLogin.test_login_fail2"};
             var AUTOCOMPLETE_TERMS_ARRAY = Object.keys(AUTOCOMPLETE_TERMS_MAP);
 
             $(function() {

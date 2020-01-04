@@ -1,38 +1,50 @@
-<testsuite errors="0" failures="0" name="nose2-junit" skipped="0" tests="12" time="366.001">
-  <testcase classname="test.TestBase" name="test_server_is_up_and_running" time="14.272903">
+<testsuite errors="1" failures="0" name="nose2-junit" skipped="0" tests="12" time="518.031">
+  <testcase classname="test.TestBase" name="test_server_is_up_and_running" time="112.427877">
     <system-out />
   </testcase>
-  <testcase classname="test.TestHome" name="test_click_book" time="36.781284">
+  <testcase classname="test.TestHome" name="test_click_book" time="39.677881">
     <system-out />
   </testcase>
-  <testcase classname="test.TestHome" name="test_search_by_author" time="47.639243">
+  <testcase classname="test.TestHome" name="test_search_by_author" time="66.699456">
     <system-out />
   </testcase>
-  <testcase classname="test.TestHome" name="test_search_by_isbn" time="55.544318">
+  <testcase classname="test.TestHome" name="test_search_by_isbn" time="59.126636">
     <system-out />
   </testcase>
-  <testcase classname="test.TestHome" name="test_search_by_title" time="44.447211">
+  <testcase classname="test.TestHome" name="test_search_by_title" time="4.655073">
+    <error message="test failure">Traceback (most recent call last):
+  File "/home/ayush/study/web-project/Flask-web-project/test.py", line 31, in setUp
+    self.driver.get(self.get_server_url())
+  File "/home/ayush/.local/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/ayush/.local/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ayush/.local/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8943/&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8943.
+
+</error>
     <system-out />
   </testcase>
-  <testcase classname="test.TestHome" name="test_search_by_year" time="45.716267">
+  <testcase classname="test.TestHome" name="test_search_by_year" time="41.058351">
     <system-out />
   </testcase>
-  <testcase classname="test.TestHome" name="test_server_is_up_and_running" time="15.044037">
+  <testcase classname="test.TestHome" name="test_server_is_up_and_running" time="18.891924">
     <system-out />
   </testcase>
-  <testcase classname="test.TestLogin" name="test_login" time="26.255450">
+  <testcase classname="test.TestLogin" name="test_login" time="43.611897">
     <system-out />
   </testcase>
-  <testcase classname="test.TestLogin" name="test_login_fail1" time="27.216498">
+  <testcase classname="test.TestLogin" name="test_login_fail1" time="33.159262">
     <system-out />
   </testcase>
-  <testcase classname="test.TestLogin" name="test_login_fail2" time="29.197265">
+  <testcase classname="test.TestLogin" name="test_login_fail2" time="41.598789">
     <system-out />
   </testcase>
-  <testcase classname="test.TestLogin" name="test_page_excess" time="12.067385">
+  <testcase classname="test.TestLogin" name="test_page_excess" time="45.307085">
     <system-out />
   </testcase>
-  <testcase classname="test.TestLogin" name="test_server_is_up_and_running" time="10.848696">
+  <testcase classname="test.TestLogin" name="test_server_is_up_and_running" time="11.318637">
     <system-out />
   </testcase>
 </testsuite>
