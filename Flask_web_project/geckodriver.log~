@@ -1,0 +1,44 @@
+1569246104411	geckodriver	INFO	Listening on 127.0.0.1:59544
+1569246105367	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.3qPhVVXQrrsX
+1569246105368	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1569246105376	geckodriver::marionette	INFO	Connecting to Marionette on localhost:46182
+1569246111971	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1569246111971	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1569246111971	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1569246111972	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1569246123150	Marionette	INFO	Listening on port 2828
+[Parent 10220, Gecko_IOThread] WARNING: pipe error (111): Connection reset by peer: file /build/firefox-etOvdh/firefox-69.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 362: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 362: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1569246222451	Marionette	INFO	Stopped listening on port 2828
+1569246227138	geckodriver	INFO	Listening on 127.0.0.1:60472
+1569246227151	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.HFou3xsW627s
+1569246227152	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1569246227164	geckodriver::marionette	INFO	Connecting to Marionette on localhost:41881
+1569246229854	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1569246229854	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1569246229855	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1569246229855	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1569246235596	Marionette	INFO	Listening on port 2828
+1569246367727	geckodriver	INFO	Listening on 127.0.0.1:57936
+1569246367737	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.57nDaieQtrWM
+1569246367738	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1569246367753	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35940
+Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/ayush which is owned by ayush.)
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 362: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 362: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1569246403527	Marionette	INFO	Stopped listening on port 2828
+1569246406300	geckodriver	INFO	Listening on 127.0.0.1:52002
+1569246407301	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.9m3oYmEA4cHV
+1569246407302	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1569246407303	geckodriver::marionette	INFO	Connecting to Marionette on localhost:33492
+Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/ayush which is owned by ayush.)
+1569246610666	geckodriver	INFO	Listening on 127.0.0.1:41297
+1569246611667	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.gPtSomSpmNSF
+1569246611669	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1569246611672	geckodriver::marionette	INFO	Connecting to Marionette on localhost:36080
+1569246614230	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1569246614230	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1569246614231	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1569246614231	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1569246621613	Marionette	INFO	Listening on port 2828
